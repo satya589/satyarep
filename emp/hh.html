@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<script type="text/javascript">
+
+    function PasswordChanged(field)
+
+    {
+
+        var span = document.getElementById("PasswordStrength");
+
+        span.innerHTML = CheckPassword(field.value);
+
+    }
+
+ 
+
+    function ButtonClicked(field)
+
+    {
+
+        var strength = document.getElementById("PasswordStrength").innerHTML;
+
+         
+
+        if (strength.indexOf("Strong") >3)
+
+        {
+
+            alert("Password is not strong enough!");
+
+            return false;
+
+        }else
+		{
+		alert("password is strong");
+		}
+    }
+
+</script>
+<body>
+
+
+ 
+
+<div>
+
+    Password:
+
+    <input type="text" onchange="PasswordChanged(this)" />
+
+    <span id="PasswordStrength"></span>
+
+    <br />
+
+    <input type="button" value="Check" onclick="return ButtonClicked()" />
+
+</div>
+
+</body>
+</html>

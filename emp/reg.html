@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>JavaScript Form Validation using a sample registration form</title>
+<meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+<meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+<link rel='stylesheet' href='js-form-validation.css' type='text/css' />
+<script src="sample-registration-form-validation.js"></script>
+
+<style>
+
+h3 {  
+margin-left: 50px;
+font-family:Arial, Helvetica, sans-serif; color:#636;  
+}  
+h1 {  
+margin-left: 50px;
+  
+}  
+form li { 
+ 
+list-style: none;  
+margin-bottom: 5px;  
+}  
+  
+form ul li label{ 
+alignment-adjust:middle;
+ color:#FFC;
+float: left;  
+clear: left;  
+width: 80px;  
+text-align: right;  
+margin-right: 10px;  
+font-family:Verdana, Arial, Helvetica, sans-serif;  
+font-size:14px;  
+}  
+  
+form ul li input, select, span {  
+
+float: left;  
+font-family:Arial, Helvetica, sans-serif ;
+color:#906;
+margin-bottom: 5px;  
+}  
+  
+form textarea {  
+float: left;  
+width: 350px;  
+height: 150px;  
+}  
+ p1
+ {
+	 float: left;  
+font-family:Arial, Helvetica, sans-serif ;
+color:#906;
+margin-bottom: 5px;
+	 }
+[type="submit"] { 
+color:#F09;
+clear: left;  
+margin: 20px 0 0 230px;  
+font-size:18px  
+}  
+  
+p {  
+margin-left: 70px;  
+font-weight: bold;  
+}  
+</style>
+</head>
+
+<body onload="document.registration.userid.focus();">
+
+<div style="position: absolute; left: 40; top: 40; right: 40; bottom: 40; background-color:#0F0; background:url(images12.jpg); "> 
+<input type="button" value=" &lt;-- BACK " onclick="history.go(-1);return false;" />
+<h3>Welcome to employee Portal  </h3><h1> Registration Form</h1>
+
+<form name='registration' onSubmit="return formValidation()" method="post" ;>
+<ul>
+<li><label for="userid">User id:</label></li>
+<li><input type="text" name="userid" size="12" /></li>
+
+<li><label for="passid">Password:</label></li>
+<li><input type="password" name="passid" size="12"  /></li>
+<li><label for="username">Name:</label></li>
+<li><input type="text" name="username" size="30" /></li>
+<li><label for="address">Address:</label></li>
+<li><input type="text" name="address" size="30" /></li>
+<li><label for="country">Country:</label></li>
+<li><select name="country">
+<option selected="" value="Default">(Please select a country)</option>
+<option value="AF">Australia</option>
+<option value="AL">Canada</option>
+<option value="DZ">India</option>
+<option value="AS">Russia</option>
+<option value="AD">USA</option>
+</select></li>
+<li><label for="zip">ZIP Code:</label></li>
+<li><input type="text" name="zip" /></li>
+<li><label for="email">Email:</label></li>
+<li><input type="text" name="email" size="30" /></li>
+<li><label id="gender">Sex:</label></li>
+<li><input type="radio" name="sex" value="Male" /><span><font color="#000000">Male</font></span></li>
+<li><input type="radio" name="sex" value="Female" /><span><font color="#000000">Female</font></span></li>
+<li><label>Language:</label></li>
+<li><input type="checkbox" name="en" value="en" checked /><span>English</span></li>
+<li><input type="checkbox" name="nonen" value="noen" /><span>Non English</span></li>
+<li><label for="desc">About:</label></li>
+<li><textarea name="desc" id="desc"></textarea></li>
+<li><input type="submit" name="submit" value="Submit" onClick="" /></li>
+</ul>
+</form>
+
+</div>
+
+</body>
+</html>
